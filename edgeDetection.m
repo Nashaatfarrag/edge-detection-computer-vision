@@ -1,0 +1,13 @@
+I = imread('circuit.tif');
+J = edge(I);
+figure;
+imshow(I); 
+firstDev = edge(J, 'prewitt');
+figure;
+imshow(firstDev);
+secondDev = edge(J, 'log');
+figure;
+imshow(secondDev); 
+cannyAlg = edge(J, 'canny');
+figure;
+imshow(cannyAlg);
